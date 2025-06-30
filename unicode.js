@@ -86,17 +86,23 @@ Assign the result to a variable named swappedString.
 //Starter Code
 // Task 1
 let inputString1 = "Code";
-let firstCodePoint; // Your code here
-let thirdCodePoint; // Your code here
+let firstCodePoint = inputString1.charCodeAt(0); // Your code here
+let thirdCodePoint = inputString1.charCodeAt(2); // Your code here
 
 // Task 2
-let wordFromCodePoints; // Your code here
+let wordFromCodePoints = String.fromCharCode(72,101,108,108); // Your code here
 
 // Task 3
 let inputString2 = "Launch";
-let swappedString; // Your code here
+let extract0 = inputString2.charCodeAt(0);
+let extract5 = inputString2.charCodeAt(5);
+let swappedString = String.fromCharCode(extract5) + inputString2.slice(1, inputString2.length - 1) + String.fromCharCode(extract0) ; 
 
+// Your code here
+// I had to force myself to learn how slicing worked. At first, I attempted to manually index. Slicing proved to be more efficient. it took me quite a while to realize that I 
+// wasn't stuck with the inputString2. I realized I was manually forming a new string. I also had to learn what .length - 1' was.
 // Log all results
+
 console.log({
   firstCodePoint,
   thirdCodePoint,
